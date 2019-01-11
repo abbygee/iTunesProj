@@ -6,22 +6,26 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-<body>
-Artist Name:
-<input type="text" id="artist" placeholder="Name">
+<body class="w3-comic">
+<h1 class="w3-comic">Search iTunes</h1>
+<div id="UI">
+    Artist Name:
+    <input type="text" id="artist" placeholder="Name">
 
-Number of results:
-<select id="options">
-    <option id="10">10</option>
-    <option id="25">25</option>
-    <option id="50">50</option>
-</select>
+    Number of results:
+    <select id="options">
+        <option id="10">10</option>
+        <option id="25">25</option>
+        <option id="50">50</option>
+    </select><br>
+</div>
 
 <button id="submit">Search</button>
 
-<div id="container">
-    <div id="songName"></div>
-</div>
+<div id="container" class="w3-comic"></div>
+
+
 </body>
 </html>

@@ -1,27 +1,35 @@
-// function getQueryParameter(name)
-// {
-//     var query = window.location.search.substring(1);
-//     var vars = query.split("&");
-//     for (var i=0;i<vars.length;i++) {
-//         var pair = vars[i].split("=");
-//         if(pair[0] == name){return pair[1];}
-//     }
-//     return false;
-// }
-
 $(document).ready(function(){
     $("#submit").click(function(){
-        $("#songName").empty();
-        $.get("http://itunes.apple.com/search?term=" + $("#artist").val(),processResults);
+        $.get("http://itunes.apple.com/search?term=" + $("#artist").val().toLocaleLowerCase(),processResults);
     });
 });
 
 
-
 function processResults(data){
+    //empties previous results
+    $("#container").empty();
+
     var result = JSON.parse(data);
+    console.log(JSON.parse(data));
+
+    var container = $("#container");
+    var table = '<table class="w3-table w3-striped w3-bordered w3-xlarge" id="table">';
+
+    if(result.resultCount === 0){
+        container.append("Sorry there are no results :(");
+    }
+
 
     for(var i = 0; i < parseInt($("#options").val()); i++){
-        $("#songName").append(result.results[i].trackName + "<br>")
+        var image = result.results[i].artworkUrl100;
+        var audio = result.results[i].previewUrl;
+
+        table += '<tr id="' + i + '">';
+        table += '<td><img src=' + '"' + image + '"' + '></td>';
+        table += "<td><div>Ranked #" + (i+1) + "</div><div>" + result.results[i].trackName + "</div><div>" + result.results[i].artistName + "</div><div>" + result.results[i].collectionName + "</div></td>";
+        table += '<td><audio controls> <source src="' + audio + '"></audio></td>';
     }
+
+    table += '</tr></table>';
+    container.append(table);
 }

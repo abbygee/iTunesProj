@@ -1,0 +1,40 @@
+audio,img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr:nth-child(even) {background-color: #ffe3e1;}
+tr:hover {background-color:#f5f5f5;}
+
+body {
+    text-align: center;
+    margin-top: 10px;
+    background-color: #ffe3e1;
+}
+
+button {
+    position: relative;
+    top: 15px;
+    bottom: 10px;
+}
+
+#UI {
+    position: relative;
+    margin-top: 10px;
+}
+
+table {
+    position: relative;
+    margin-top: 10px;
+    background-color: #e4cac8;
+    width: 100%;
+}
+
+.w3-comic{
+    font-family: "Comic Sans MS";
+}
+
+#container{
+    position: relative;
+    top: 30px;
+}
