@@ -1,15 +1,14 @@
-audio,img {
-    margin-left: auto;
-    margin-right: auto;
+img {
+    position: relative;
+    top: 5px;
 }
 
-tr:nth-child(even) {background-color: #ffe3e1;}
-tr:hover {background-color:#f5f5f5;}
+tr:nth-child(even) {background-color: #e8fffd;}
 
 body {
     text-align: center;
     margin-top: 10px;
-    background-color: #ffe3e1;
+    background-color: #dedce4;
 }
 
 button {
@@ -26,15 +25,20 @@ button {
 table {
     position: relative;
     margin-top: 10px;
-    background-color: #e4cac8;
+    background-color: #cbc9d0;
     width: 100%;
 }
 
-.w3-comic{
-    font-family: "Comic Sans MS";
+.w3-comfort{
+    font-family: 'Comfortaa';
 }
 
 #container{
     position: relative;
     top: 30px;
+}
+
+.audio{
+    position: relative;
+    top: 25px;
 }

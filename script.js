@@ -13,7 +13,7 @@ function processResults(data){
     console.log(JSON.parse(data));
 
     var container = $("#container");
-    var table = '<table class="w3-table w3-striped w3-bordered w3-xlarge" id="table">';
+    var table = '<table class="w3-table w3-striped w3-bordered w3-large" id="table">';
 
     if(result.resultCount === 0){
         container.append("Sorry there are no results :(");
@@ -27,7 +27,7 @@ function processResults(data){
         table += '<tr id="' + i + '">';
         table += '<td><img src=' + '"' + image + '"' + '></td>';
         table += "<td><div>Ranked #" + (i+1) + "</div><div>" + result.results[i].trackName + "</div><div>" + result.results[i].artistName + "</div><div>" + result.results[i].collectionName + "</div></td>";
-        table += '<td><audio controls> <source src="' + audio + '"></audio></td>';
+        table += '<td><audio controls class="audio"> <source src="' + audio + '"></audio></td>';
     }
 
     table += '</tr></table>';
