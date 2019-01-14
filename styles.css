@@ -3,8 +3,6 @@ img {
     top: 5px;
 }
 
-tr:nth-child(even) {background-color: #e8fffd;}
-
 body {
     text-align: center;
     margin-top: 10px;

@@ -19,7 +19,6 @@ function processResults(data){
         container.append("Sorry there are no results :(");
     }
 
-
     for(var i = 0; i < parseInt($("#options").val()); i++){
         var image = result.results[i].artworkUrl100;
         var audio = result.results[i].previewUrl;
