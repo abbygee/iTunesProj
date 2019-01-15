@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $("#submit").click(function(){
-        $.get("http://itunes.apple.com/search?term=" + $("#artist").val().toLocaleLowerCase(),processResults);
+        $.get("https://itunes.apple.com/search?term=" + $("#artist").val().toLocaleLowerCase(),processResults);
     });
 });
 
