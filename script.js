@@ -28,7 +28,7 @@ function processResults(data){
     var lim = parseInt($("#options").val());
     for(var i = 0; i < lim; i++){
         var href = "detail.html?term=";
-        href += data.results[0].artistName + "&song=" + i + "&limit=" + lim;
+        href += data.results[i].artistName + "&song=" + i + "&limit=" + lim;
         console.log(href);
 
 
